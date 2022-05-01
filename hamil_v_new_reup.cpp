@@ -5,6 +5,7 @@
 #include <fstream>
 
 con gà công nghiệp nè ^^!~~~
+con cặc :) 
 
 using namespace std;
 #define MAX 100
