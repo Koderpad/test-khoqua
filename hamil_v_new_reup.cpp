@@ -4,8 +4,7 @@
 #include <iostream>
 #include <fstream>
 
-con gà công nghiệp nè ^^!~~~
-con cặc :) 
+//#define DEBUG
 
 using namespace std;
 #define MAX 100
