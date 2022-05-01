@@ -4,6 +4,8 @@
 #include <iostream>
 #include <fstream>
 
+con gà công nghiệp nè ^^!~~~
+
 using namespace std;
 #define MAX 100
 
