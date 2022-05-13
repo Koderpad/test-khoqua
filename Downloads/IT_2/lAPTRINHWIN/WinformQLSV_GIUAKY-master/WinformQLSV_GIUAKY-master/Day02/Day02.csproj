@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AC6D063B-E4A8-411A-B441-27A84AD29169}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Day02</RootNamespace>
+    <AssemblyName>Day02</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddScoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddScoreForm.Designer.cs">
+      <DependentUpon>AddScoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="avgScoreByCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="avgScoreByCourseForm.Designer.cs">
+      <DependentUpon>avgScoreByCourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COURSES\AddCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COURSES\AddCourseForm.Designer.cs">
+      <DependentUpon>AddCourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataInSql.cs">
+      <DependentUpon>DataInSql.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataInSql.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataInSql.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="COURSES\ManageCoursesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COURSES\ManageCoursesForm.Designer.cs">
+      <DependentUpon>ManageCoursesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COURSES\PrintCoursesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COURSES\PrintCoursesForm.Designer.cs">
+      <DependentUpon>PrintCoursesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageScoresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageScoresForm.Designer.cs">
+      <DependentUpon>ManageScoresForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MydatabaseLINQ.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MydatabaseLINQ.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveScoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveScoreForm.Designer.cs">
+      <DependentUpon>RemoveScoreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultForm.Designer.cs">
+      <DependentUpon>ResultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SCORE.cs" />
+    <Compile Include="StaticsResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaticsResultForm.Designer.cs">
+      <DependentUpon>StaticsResultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="STUDENTS\AddStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="STUDENTS\AddStudentForm.Designer.cs">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="COURSES.cs" />
+    <Compile Include="COURSES\EditCourseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COURSES\EditCourseForm.Designer.cs">
+      <DependentUpon>EditCourseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="STUDENTS\FindStudentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="STUDENTS\FindStudentsForm.Designer.cs">
+      <DependentUpon>FindStudentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\Form_registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\Form_registration.Designer.cs">
+      <DependentUpon>Form_registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\MainForm01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\MainForm01.Designer.cs">
+      <DependentUpon>MainForm01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="STUDENTS\ManageStudentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="STUDENTS\ManageStudentsForm.Designer.cs">
+      <DependentUpon>ManageStudentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MY_DB.cs" />
+    <Compile Include="STUDENTS\PrintStudentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="STUDENTS\PrintStudentsForm.Designer.cs">
+      <DependentUpon>PrintStudentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="COURSES\RemoveCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="COURSES\RemoveCourse.Designer.cs">
+      <DependentUpon>RemoveCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="STUDENTS\StaticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="STUDENTS\StaticsForm.Designer.cs">
+      <DependentUpon>StaticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="STUDENT.cs" />
+    <Compile Include="STUDENTS\studentsListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="STUDENTS\studentsListForm.Designer.cs">
+      <DependentUpon>studentsListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="STUDENTS\UpdateDeleteStudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="STUDENTS\UpdateDeleteStudentForm.Designer.cs">
+      <DependentUpon>UpdateDeleteStudentForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddScoreForm.resx">
+      <DependentUpon>AddScoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="avgScoreByCourseForm.resx">
+      <DependentUpon>avgScoreByCourseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COURSES\AddCourseForm.resx">
+      <DependentUpon>AddCourseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COURSES\ManageCoursesForm.resx">
+      <DependentUpon>ManageCoursesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COURSES\PrintCoursesForm.resx">
+      <DependentUpon>PrintCoursesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageScoresForm.resx">
+      <DependentUpon>ManageScoresForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveScoreForm.resx">
+      <DependentUpon>RemoveScoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResultForm.resx">
+      <DependentUpon>ResultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaticsResultForm.resx">
+      <DependentUpon>StaticsResultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="STUDENTS\AddStudentForm.resx">
+      <DependentUpon>AddStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COURSES\EditCourseForm.resx">
+      <DependentUpon>EditCourseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="STUDENTS\FindStudentsForm.resx">
+      <DependentUpon>FindStudentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\Form_registration.resx">
+      <DependentUpon>Form_registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\MainForm01.resx">
+      <DependentUpon>MainForm01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="STUDENTS\ManageStudentsForm.resx">
+      <DependentUpon>ManageStudentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="STUDENTS\PrintStudentsForm.resx">
+      <DependentUpon>PrintStudentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="COURSES\RemoveCourse.resx">
+      <DependentUpon>RemoveCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="STUDENTS\StaticsForm.resx">
+      <DependentUpon>StaticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="STUDENTS\studentsListForm.resx">
+      <DependentUpon>studentsListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="STUDENTS\UpdateDeleteStudentForm.resx">
+      <DependentUpon>UpdateDeleteStudentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="DataInSql.xsc">
+      <DependentUpon>DataInSql.xsd</DependentUpon>
+    </None>
+    <None Include="DataInSql.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataInSql.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataInSql.xss">
+      <DependentUpon>DataInSql.xsd</DependentUpon>
+    </None>
+    <None Include="MydatabaseLINQ.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MydatabaseLINQ.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MydatabaseLINQ.dbml.layout">
+      <DependentUpon>MydatabaseLINQ.dbml</DependentUpon>
+    </None>
+    <None Include="myDBDataSet.xsc">
+      <DependentUpon>myDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="myDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>myDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="myDBDataSet.xss">
+      <DependentUpon>myDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\image1.png" />
+    <None Include="Resources\icons8-male-user-64.png" />
+    <None Include="Resources\icons8-male-user-48.png" />
+    <None Include="Resources\icons8-login-67.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
